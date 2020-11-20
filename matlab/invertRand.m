@@ -8,9 +8,6 @@ H = rand(n,n);
 i=str2num(getenv('SLURM_TASKS_PER_NODE'));
 pc = parcluster('local');
 
-% direct storage to tmp folder
-pc.JobStorageLocation = strcat('/tmp/',getenv('SLURM_JOB_ID'));
-
 % create parallel pool on cluster
 poolObj = parpool(pc,i);
 poolSize = poolObj.NumWorkers;
