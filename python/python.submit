@@ -2,7 +2,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=5gb
-#SBATCH --partition=MATLAB/R2020a
+#SBATCH --partition=short-cpu
 #SBATCH --time=00:10:00
 #SBATCH --job-name=python_example
 #SBATCH --error=python_example.%J.err
@@ -10,4 +10,4 @@
 
 module load python/3.8
 
-python333 helloworld.py
+python3 helloworld.py
