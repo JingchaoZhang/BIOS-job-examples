@@ -1,4 +1,4 @@
-# RSPH HPC job examples
+# BIOS HPC job examples
 
 This repository contains scripts, data and submit files for running many popular applications on the RSPH clusters.
 
