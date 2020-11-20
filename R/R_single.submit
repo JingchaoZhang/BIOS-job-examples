@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --mem=4G
+#SBATCH --time=00:10:00
+#SBATCH --partition=short-cpu
+#SBATCH --job-name=R_normalize
+#SBATCH --error=R_normalize.%J.err
+#SBATCH --output=R_normalize.%J.out
+
+module load R/4.0.2
+
+Rscript normalize.R

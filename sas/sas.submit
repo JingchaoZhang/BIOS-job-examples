@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=1gb
+#SBATCH --partition=short-cpu
+#SBATCH --time=00:10:00
+#SBATCH --job-name=sas_example
+#SBATCH --error=sas_example.%J.err
+#SBATCH --output=sas_example.%J.out
+
+module load SAS/9.4
+
+sas t-test.sas
